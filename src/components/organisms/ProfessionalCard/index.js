@@ -3,11 +3,9 @@ import styles from "./styles.module.scss"
 import Image from "../../atoms/Image";
 
 const ProfessionalCards = ({ image, text }) => {
-    console.log("image --- text")
-    console.log(image)
-    console.log(text)
-
-
+    const onclick = () => {
+        console.log("On click")
+    }
 
     return (
             <div className={styles.card}>
@@ -16,6 +14,7 @@ const ProfessionalCards = ({ image, text }) => {
                 </div>
                 <div className={styles.cardTitle}>
                     {text}
+                    <Button onClick={() => onclick()} text={text} color={"primary"} border={"1px"} />
                 </div>
             </div>
     )

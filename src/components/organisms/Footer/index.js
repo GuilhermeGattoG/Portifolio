@@ -10,7 +10,7 @@ const Footer = () => {
 
     return (
         <div className={style.footer} >
-            <p>Take a look to my social medias</p>
+            <p>Dê uma olhada nas minhas redes sociais</p>
             <div className={style.facebook} onClick={() => goToPage("https://www.facebook.com/guilherme.gattogomes")} >
                 <Image src="facebook-logo.svg" alt="facebook" width="30px" />
             </div>

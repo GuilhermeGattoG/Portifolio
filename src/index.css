@@ -13,6 +13,24 @@ code {
     monospace;
 }
 
+h1 {
+  font-size: 48px;
+}
+
+p {
+ font-size: 24px;
+}
+
+@media (max-width: 480px) {
+  p {
+    font-size: 16px;
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+}
+
 /*primary color : #342A21*/
 /*secondary : #C9B79C*/
 /*default : #FFFFFF;*/
