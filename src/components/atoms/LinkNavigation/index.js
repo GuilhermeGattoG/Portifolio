@@ -1,5 +1,5 @@
 import React from "react"
-import "./style.module.scss"
+import "./styles.module.scss"
 
 const LinkNavigation = ({ link, text }) => {
     return (

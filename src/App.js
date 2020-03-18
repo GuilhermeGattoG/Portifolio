@@ -1,16 +1,29 @@
-import React from 'react';
+import React, {Component} from 'react';
 import './App.css';
 
-import NavBar from './components/template/NavBar';
-import Footer from './components/template/Footer';
+import NavBar from './components/organisms/NavBar';
+import Footer from './components/organisms/Footer';
+import Personal from "./components/template/Personal"
+import Image from "./components/atoms/Image";
 
 function App() {
   return (
     <div className="App">
-        <NavBar /> 
-        <h1>Apenas uma texto</h1>
-        <h2>Para não deixar essa página em branco</h2>
-        <p>Quem sabe isso não pode me ajudar, não é mesmo? ;)</p>
+        <NavBar />
+        <Personal/>
+        <div style={{height: "250px", backgroundColor: "#FFFFFF"}}>
+            <h1>Parte 1</h1>
+            <p>Aqui será onde deixarei minha descrição pessoal</p>
+        </div>
+        <div style={{height: "250px", backgroundColor: "#342A21", color: "#FFFFFF"}}>
+            <h1>Parte 2</h1>
+            <p>Aqui será onde deixarei minha formação</p>
+        </div>
+        <div style={{height: "250px", backgroundColor: "#FFFFFF"}}>
+            <h1>Parte 3</h1>
+            <p>Não definido ainda</p>
+        </div>
+        <Image src={"utfpr-logo.svg"} alt={"utfpr"} width={"30%"} circle={true} />
         <Footer />
     </div>
   )

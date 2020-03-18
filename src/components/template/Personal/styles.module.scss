@@ -1,0 +1,51 @@
+.personalContainer {
+  background-color: #FFFFFF;
+  color: #342A21;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+  padding: 50px 10%;
+
+  @media ("max-width: 480px") {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+.picture {
+  justify-content: start;
+  width: 35%;
+
+  @media ("max-width: 480px") {
+    align-self: center;
+    width: 60%;
+  }
+}
+
+.description {
+  justify-content: end;
+  width: 65%;
+  padding: 0 5%;
+
+  h1 {
+    font-size: 48px;
+  }
+
+  p {
+    font-size: 24px;
+    text-align: justify;
+  }
+
+  @media ("max-width: 480px") {
+    width: 100%;
+
+    h1 {
+      font-size: 32px;
+    }
+
+    p {
+      font-size: 16px;
+    }
+  }
+}
