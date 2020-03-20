@@ -1,9 +1,9 @@
 import React from "react"
-import "./style.module.scss"
+import "./styles.module.scss"
 
-const LinkNavigation = ({ link, text }) => {
+const LinkNavigation = ({ onClick, text }) => {
     return (
-        <a href={`${link}`} >{text}</a>
+        <a onClick={() => onClick()} >{text}</a>
     )
 }
 

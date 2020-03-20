@@ -1,16 +1,21 @@
-import React from 'react';
+import React, {Component} from 'react';
 import './App.css';
 
-import NavBar from './components/template/NavBar';
-import Footer from './components/template/Footer';
+import NavBar from './components/organisms/NavBar';
+import Footer from './components/organisms/Footer';
+import Personal from "./components/template/Personal"
+import Professional from "./components/template/Professional";
+import AboutPage from "./components/template/AboutPage";
+import Tecnologies from "./components/template/Tecnologies"
 
 function App() {
   return (
     <div className="App">
-        <NavBar /> 
-        <h1>Apenas uma texto</h1>
-        <h2>Para não deixar essa página em branco</h2>
-        <p>Quem sabe isso não pode me ajudar, não é mesmo? ;)</p>
+        <NavBar />
+        <Personal/>
+        <Professional/>
+        <AboutPage/>
+        <Tecnologies/>
         <Footer />
     </div>
   )
