@@ -1,5 +1,5 @@
 import React from "react"
-import style from "./styles.module.scss"
+import styles from "./styles.module.scss"
 
 import Image from "../../atoms/Image"
 
@@ -9,17 +9,23 @@ const Footer = () => {
     }
 
     return (
-        <div className={style.footer} >
-            <p>Dê uma olhada nas minhas redes sociais</p>
-            <div className={style.facebook} onClick={() => goToPage("https://www.facebook.com/guilherme.gattogomes")} >
+        <div id={"contato"} className={styles.footer} >
+            <h1>Para entrar em contato comigo</h1>
+            <p>Dê uma olhada no meu e-mail e redes sociais</p>
+            <div className={styles.facebook} onClick={() => goToPage("https://www.facebook.com/guilherme.gattogomes")} >
                 <Image src="facebook-logo.svg" alt="facebook" width="30px" />
             </div>
-            <div className={style.linkedin} onClick={() => goToPage("https://www.linkedin.com/in/guilherme-gatto-5a346215b")} >
+            <div className={styles.linkedin} onClick={() => goToPage("https://www.linkedin.com/in/guilherme-gatto-5a346215b")} >
                 <Image src="linkedin-logo.svg" alt="LinkedIn" width="30px" />
             </div>
-            <div className={style.github} onClick={() => goToPage("https://github.com/GuilhermeGattoG")} >
+            <div className={styles.github} onClick={() => goToPage("https://github.com/GuilhermeGattoG")} >
                 <Image src="github-logo.svg" alt="github" width="30px" />
             </div>
+            <div className={styles.gmail} onClick={() => goToPage("mailto:guilherme.gatto.g@gmail.com")} >
+                <Image src="gmail-logo.svg" alt="github" width="30px" />
+            </div>
+            <br/><br/><br/>
+            <p>Made with &#128147; by &#128008;</p>
         </div>
     )
 }

@@ -6,6 +6,11 @@
 
     p {
         flex: 1 0 100%;
+        color: #282c34;
+    }
+
+    span {
+        font-style: italic;
     }
 }
 
@@ -33,7 +38,20 @@
     }
 }
 
-.facebook, .linkedin, .github {
-    cursor: pointer;
-    margin: 0 2.5rem;
+.gmail {
+    &:hover {
+        img {
+            filter: invert(21%) sepia(56%) saturate(4904%) hue-rotate(354deg) brightness(79%) contrast(97%);
+        }
+    }
 }
+
+.facebook, .linkedin, .github, .gmail {
+    cursor: pointer;
+    margin: 0 2rem;
+
+    @media (max-width: 480px) {
+        margin: 0 1rem;
+    }
+}
+

@@ -14,9 +14,19 @@
   align-self: center;
   width: 300px;
   text-align: center;
+  border-top: 1px solid #ffffff;
 }
 
 .tecnologyImage {
   width: 100%;
-  border-bottom: 1px solid #ffffff;
+}
+
+.animateRotation {
+  img {
+    animation: spinElement 10s linear infinite;
+  }
+}
+
+@keyframes spinElement {
+    100% {transform: rotate(360deg)}
 }

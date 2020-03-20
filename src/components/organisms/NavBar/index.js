@@ -18,15 +18,20 @@ const NavBar = () => {
         prevScrollpos = currentScrollPos
     }
 
+    const scrollToDiv = (classId) => {
+        window.scrollTo({top: (document.getElementById(classId).offsetTop), left: 0, behavior: "smooth"})
+    }
+
     return (
         <nav>
             <div className={`nav-left`} >
             </div>
             <div className={`nav-right`} >
-                <LinkNavigation link="index" text="Home" />
-                <LinkNavigation link="index" text="About" />
-                <LinkNavigation link="index" text="Qualification" />
-                <LinkNavigation link={"index"} text={"Braziel"} />
+                <LinkNavigation onClick={() => scrollToDiv("personal")} text="Pessoal" />
+                <LinkNavigation onClick={()  => scrollToDiv("professional")} text="Profissional" />
+                <LinkNavigation onClick={() => scrollToDiv("about")} text="Este Site" />
+                <LinkNavigation onClick={() => scrollToDiv("tecnologies")} text={"Tecnologias"} />
+                <LinkNavigation onClick={() => scrollToDiv("contato")} text={"Contato"} />
             </div>
         </nav>
     )

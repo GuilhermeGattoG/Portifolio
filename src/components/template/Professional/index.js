@@ -4,14 +4,14 @@ import ProfessionalCard from "../../organisms/ProfessionalCard";
 
 const Professional = ({ }) => {
     return (
-        <div className={styles.professionalContainer} >
+        <div id={"professional"} className={styles.professionalContainer} >
             <div className={styles.containerTitle}>
                 <h1>Minha formação profissional</h1>
             </div>
             <div className={styles.cardsContainer}>
-                    <ProfessionalCard image={"utfpr-logo.svg"} text={"Graduação"} />
-                    <ProfessionalCard image={"ie-logo.svg"} text={"Estágio"} />
-                    <ProfessionalCard image={"medpass-logo.svg"} text={"Developer"}/>
+                    <ProfessionalCard org={"UTFPR"} image={"utfpr-logo.svg"} text={"Graduação"} />
+                    <ProfessionalCard org={"IE"} image={"ie-logo.svg"} text={"Estágio"} />
+                    <ProfessionalCard org={"MedPass"} image={"medpass-logo.svg"} text={"Developer"}/>
             </div>
         </div>
     )

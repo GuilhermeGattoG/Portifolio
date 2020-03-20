@@ -1,8 +1,9 @@
 .personalContainer {
   background-color: #FFFFFF;
-  color: #342A21;
+  color: #282c34;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin-bottom: 50px;
   padding: 50px 10%;
 
@@ -33,7 +34,7 @@
   }
 
   p {
-    font-size: 24px;
+    font-size: 20px;
     text-align: justify;
   }
 
