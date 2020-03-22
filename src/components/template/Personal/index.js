@@ -3,6 +3,20 @@ import styles from "./styles.module.scss"
 import Image from "../../atoms/Image";
 
 const Personal = () => {
+
+    const movePicture = () => {
+        const header = document.getElementsByClassName(styles.picture)[0]
+        const minScroll = 100
+
+        window.scroll(() => {
+            let t = window.scrollTop()
+            if(t > minScroll){
+                header.height = t
+            }
+        })
+    }
+
+
     return (
         <div id={"personal"} className={styles.personalContainer}>
             <div className={styles.picture}>

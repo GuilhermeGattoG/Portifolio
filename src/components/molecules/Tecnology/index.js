@@ -2,6 +2,16 @@ import React from "react"
 import styles from "./styles.module.scss";
 import Image from "../../atoms/Image";
 
+const scrollListener = () => {
+    if ((window.pageYOffset + window.outerHeight) >= document.getElementsByClassName(styles.tecnology)[0].offsetTop && !document.getElementsByClassName(styles.tecnology)[0].classList.contains(styles.animationStart)) {
+        document.getElementsByClassName(styles.tecnology)[0].classList.toggle(styles.animationStart)
+        window.removeEventListener("scroll", scrollListener)
+    }
+}
+
+window.addEventListener("scroll",  scrollListener)
+
+
 const Tecnology = ({ image, title, text }) => {
     return (
         <div className={styles.tecnology}>
