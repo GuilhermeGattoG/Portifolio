@@ -2,21 +2,16 @@ import React from "react"
 import styles from "./styles.module.scss"
 import Image from "../../atoms/Image";
 
-const Personal = () => {
-
-    const movePicture = () => {
-        const header = document.getElementsByClassName(styles.picture)[0]
-        const minScroll = 100
-
-        window.scroll(() => {
-            let t = window.scrollTop()
-            if(t > minScroll){
-                header.height = t
-            }
-        })
+const listenerForPicture = () => {
+    if(window.pageYOffset <= (document.getElementById("professional").offsetTop - document.getElementsByClassName(styles.picture)[0].children[0].clientHeight) && window.matchMedia("(min-width:480px)").matches){
+        document.getElementsByClassName(styles.picture)[0].style.marginTop = `${(document.getElementsByClassName(styles.description)[0].clientHeight - (1.25 * document.getElementsByClassName(styles.picture)[0].children[0].clientHeight)) * (window.pageYOffset / document.getElementsByClassName(styles.description)[0].clientHeight)}px`
     }
+}
+
+window.addEventListener("scroll",listenerForPicture)
 
 
+const Personal = () => {
     return (
         <div id={"personal"} className={styles.personalContainer}>
             <div className={styles.picture}>

@@ -2,7 +2,7 @@ import React from "react"
 import styles from "./styles.module.scss"
 import ProfessionalCard from "../../organisms/ProfessionalCard";
 
-const Professional = ({ }) => {
+const Professional = () => {
     return (
         <div id={"professional"} className={styles.professionalContainer} >
             <div className={styles.containerTitle}>
