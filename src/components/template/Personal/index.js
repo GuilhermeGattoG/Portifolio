@@ -2,6 +2,15 @@ import React from "react"
 import styles from "./styles.module.scss"
 import Image from "../../atoms/Image";
 
+const listenerForPicture = () => {
+    if(window.pageYOffset <= (document.getElementById("professional").offsetTop - document.getElementsByClassName(styles.picture)[0].children[0].clientHeight) && window.matchMedia("(min-width:480px)").matches){
+        document.getElementsByClassName(styles.picture)[0].style.marginTop = `${(document.getElementsByClassName(styles.description)[0].clientHeight - (1.25 * document.getElementsByClassName(styles.picture)[0].children[0].clientHeight)) * (window.pageYOffset / document.getElementsByClassName(styles.description)[0].clientHeight)}px`
+    }
+}
+
+window.addEventListener("scroll",listenerForPicture)
+
+
 const Personal = () => {
     return (
         <div id={"personal"} className={styles.personalContainer}>
@@ -17,7 +26,7 @@ const Personal = () => {
                     <br/><br/>
                     Em 2019 atuei como estagiário desenvolvendo aplicativos móveis pela empresa IE Tecnologia. Para tal, fiz uso do framework Ionic. Também atuei na manutenção do servidor da empresa, que contava principalmente com recursos na linguagem PHP.
                     <br/><br/>
-                    Ao final deste mesmo ano já atuava como desenvolvedor Web Júnior na MedPass, onde utilizei React.js e Vue.js para implementar Single Page Applications (SPAs), bem como manutenção em em aplicações Mobile utilizando React Native.
+                    Ao final deste mesmo ano já atuava como desenvolvedor Web Júnior na MedPass, onde utilizei React.js e Vue.js para implementar Single Page Applications (SPAs), bem como manutenção em aplicações Mobile utilizando React Native.
                 </p>
             </div>
         </div>

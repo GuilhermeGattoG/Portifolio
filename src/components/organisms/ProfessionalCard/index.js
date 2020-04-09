@@ -1,21 +1,44 @@
 import React from "react"
 import styles from "./styles.module.scss"
+import Link from "../../atoms/Link"
 import Image from "../../atoms/Image";
-import Button from "../../atoms/Button"
 
-const ProfessionalCards = ({ org, image, text }) => {
-    const onclick = () => {
-        console.log("On click")
+const ProfessionalCards = ({ org, image, text, explanation }) => {
+    const expandDiv = (e) => {
+        const divToBeExpanded = e.currentTarget.parentElement.parentElement.parentElement.parentElement.children[1]
+
+        if(divToBeExpanded.classList.contains(styles.avoidAnimation)) {
+            divToBeExpanded.classList.remove(styles.avoidAnimation)
+        }
+    }
+
+    const reduceDiv = (e) => {
+        const divToBeReduced = e.currentTarget.parentElement.parentElement.parentElement.children[1]
+
+        if(!divToBeReduced.classList.contains(styles.reduceAnimation)) {
+            divToBeReduced.classList.add(styles.reduceAnimation)
+        }
+
+        divToBeReduced.addEventListener("animationend", () => {
+            divToBeReduced.classList.add(styles.avoidAnimation)
+            divToBeReduced.classList.remove(styles.reduceAnimation)
+        }, {once: true})
     }
 
     return (
             <div className={styles.card}>
-                <div className={styles.cardImage}>
-                    {/*<Image width={"100%"} src={"utfpr-logo.svg"} alt={"UTFPR"} />*/}
-                    <h1>{org}</h1>
+                <div className={styles.reducedContent}>
+                    <div className={styles.cardImage}>
+                        <h1>{org}</h1>
+                    </div>
+                    <div className={styles.cardTitle}>
+                        <Link onClick={(e) => expandDiv(e)} text={text} color={"primary"} />
+                    </div>
                 </div>
-                <div className={styles.cardTitle}>
-                    <Button onClick={() => onclick()} text={text} color={"primary"} border={"3px"} width={"90%"} height={"50px"} fontSize={"1.5rem"} />
+                <div className={`${styles.expandedContent} ${styles.avoidAnimation}`}>
+                    <Image src={image} alt={image} width={"80%"} />
+                    <p>{explanation}</p>
+                    <Link onClick={(e) => reduceDiv(e)} text={"Diminuir"} color={"primary"}/>
                 </div>
             </div>
     )

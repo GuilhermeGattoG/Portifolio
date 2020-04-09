@@ -1,6 +1,7 @@
 import React from "react"
 import styles from "./styles.module.scss"
 import Tecnology from "../../molecules/Tecnology";
+import {isElement} from "react-dom/test-utils";
 
 const Tecnologies = () => {
     return (
