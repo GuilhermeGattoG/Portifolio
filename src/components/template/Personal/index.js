@@ -26,7 +26,7 @@ const Personal = () => {
                     <br/><br/>
                     Em 2019 atuei como estagiário desenvolvendo aplicativos móveis pela empresa IE Tecnologia. Para tal, fiz uso do framework Ionic. Também atuei na manutenção do servidor da empresa, que contava principalmente com recursos na linguagem PHP.
                     <br/><br/>
-                    Ao final deste mesmo ano já atuava como desenvolvedor Web Júnior na MedPass, onde utilizei React.js e Vue.js para implementar Single Page Applications (SPAs), bem como manutenção em em aplicações Mobile utilizando React Native.
+                    Ao final deste mesmo ano já atuava como desenvolvedor Web Júnior na MedPass, onde utilizei React.js e Vue.js para implementar Single Page Applications (SPAs), bem como manutenção em aplicações Mobile utilizando React Native.
                 </p>
             </div>
         </div>

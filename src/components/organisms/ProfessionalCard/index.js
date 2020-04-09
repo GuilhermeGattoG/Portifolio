@@ -1,21 +1,28 @@
 import React from "react"
 import styles from "./styles.module.scss"
 import Link from "../../atoms/Link"
+import Image from "../../atoms/Image";
 
-const ProfessionalCards = ({ org, image, text }) => {
+const ProfessionalCards = ({ org, image, text, explanation }) => {
     const expandDiv = (e) => {
         const divToBeExpanded = e.currentTarget.parentElement.parentElement.parentElement.parentElement.children[1]
 
-        // if(!divToBeExpanded.classList.contains(styles.expandAnimation)) {
-            divToBeExpanded.classList.toggle(styles.avoidAnimation)
-            // divToBeExpanded.children[1].style.display = "flex"
-        // }
-        // else {
-        //     divToBeExpanded.children[1].style.display = "none"
-        //     divToBeExpanded.classList.toggle(styles.expandAnimation)
-        // }
+        if(divToBeExpanded.classList.contains(styles.avoidAnimation)) {
+            divToBeExpanded.classList.remove(styles.avoidAnimation)
+        }
+    }
 
-        console.log(divToBeExpanded)
+    const reduceDiv = (e) => {
+        const divToBeReduced = e.currentTarget.parentElement.parentElement.parentElement.children[1]
+
+        if(!divToBeReduced.classList.contains(styles.reduceAnimation)) {
+            divToBeReduced.classList.add(styles.reduceAnimation)
+        }
+
+        divToBeReduced.addEventListener("animationend", () => {
+            divToBeReduced.classList.add(styles.avoidAnimation)
+            divToBeReduced.classList.remove(styles.reduceAnimation)
+        }, {once: true})
     }
 
     return (
@@ -29,7 +36,9 @@ const ProfessionalCards = ({ org, image, text }) => {
                     </div>
                 </div>
                 <div className={`${styles.expandedContent} ${styles.avoidAnimation}`}>
-                    <h1>Conteúdo expandido</h1>
+                    <Image src={image} alt={image} width={"80%"} />
+                    <p>{explanation}</p>
+                    <Link onClick={(e) => reduceDiv(e)} text={"Diminuir"} color={"primary"}/>
                 </div>
             </div>
     )

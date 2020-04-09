@@ -9,9 +9,22 @@ const Professional = () => {
                 <h1>Minha formação profissional</h1>
             </div>
             <div className={styles.cardsContainer}>
-                    <ProfessionalCard org={"UTFPR"} image={"utfpr-logo.svg"} text={"Graduação"} />
-                    <ProfessionalCard org={"IE"} image={"ie-logo.svg"} text={"Estágio"} />
-                    <ProfessionalCard org={"MedPass"} image={"medpass-logo.svg"} text={"Developer"}/>
+                    <ProfessionalCard
+                        org={"UTFPR"}
+                        image={"utfpr-logo.svg"}
+                        text={"Graduação"}
+                        explanation={"Durante o curso de Engenharia de Computação estive em contato com matérias que percorrem do núcleo comum às áreas de conhecimento específicas de programação e lógica computacional. Atrelada à multidisciplinariedade da graduação, também atuei como Secretário Financeiro do Diretório Acadêmico de Computação (DACOMP), sendo um dos responsáveis pela tesouraria do time."}/>
+                    <ProfessionalCard
+                        org={"IE"}
+                        image={"ie-logo.svg"}
+                        text={"Estágio"}
+                        explanation={"Enquanto estagiário na IE Tecnologia atuei como Desenvolvedor, implementando soluções mobile com Ionic e serviços de gerenciamento em PHP. Juntamente com o desenvolvimento de aplicativos, entrei em contato com modelagem de software e versionamento de código."}
+                        style={{color: "filter: invert(15%) sepia(100%) saturate(7473%) hue-rotate(4deg) brightness(108%) contrast(113%);"}}/>
+                    <ProfessionalCard
+                        org={"MedPass"}
+                        image={"medpass-logo.svg"}
+                        text={"Developer"}
+                        explanation={"Atuando como Desenvolver Web Jr., aprimorei minhas práticas de modelo de aplicações e versionamento enquanto programava Single Page Applications (SPAs) com o auxílio dos frameworks React.js e Vue.js. Também realizava manutenções de aplicações móveis utilizando React Native."}/>
             </div>
         </div>
     )

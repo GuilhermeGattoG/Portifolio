@@ -13,10 +13,11 @@
   height: auto;
   align-self: start;
 
-  animation: reduce 1s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-  animation-direction: normal;
+  &:nth-child(2) {
+    img {
+      filter: invert(15%) sepia(100%) saturate(7473%) hue-rotate(4deg) brightness(108%) contrast(113%);
+    }
+  }
 }
 
 .cardImage {
@@ -40,6 +41,26 @@
   animation-direction: normal;
   animation-timing-function: ease;
   align-items: center;
+
+  padding-top: 25px;
+
+  img{
+    max-height: 120px;
+  }
+
+  p {
+    font-weight: 400;
+    font-size: 1rem;
+    color: #282c34;
+  }
+}
+
+.reduceAnimation {
+  animation: reduce 1s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-timing-function: ease;
 }
 
 .avoidAnimation {
@@ -52,20 +73,34 @@
     height: auto;
     display: block;
     opacity: 0;
+    margin-top: -30%;
+    z-index: -1;
+  }
+  99% {
+    border-top: none;
+    opacity: 1;
+    z-index: 0;
+    margin-top: 50px;
   }
   100% {
-    opacity: 1;
+    border-top: 1px solid #282c34;
+    margin-top: 50px;
   }
 }
 
 @keyframes reduce {
-  //0% {
-  //  width: 90%;
-  //}
-  //50% {
-  //  width: 75%;
-  //}
-  //100% {
-  //  width: 270px;
-  //}
+  0% {
+    border-top: none;
+    margin-top: 50px;
+    opacity: 1;
+  }
+  99% {
+    margin-top: -30%;
+    z-index: -1;
+  }
+  100% {
+    height: auto;
+    opacity: 0;
+    display: none;
+  }
 }
