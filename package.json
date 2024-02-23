@@ -7,6 +7,7 @@
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
     "classnames": "^2.2.6",
+    "sass": "^1.32.0",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
     "react-scripts": "^5.0.1"
@@ -16,9 +17,6 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
   },
   "browserslist": {
     "production": [
@@ -33,7 +31,7 @@
     ]
   },
   "engines": {
-    "node": ">=12.0.0"
+    "node": ">=20.11.1"
   },
   "devDependencies": {
     "node-sass": "4.14.1"
