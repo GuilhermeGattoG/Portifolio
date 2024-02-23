@@ -29,11 +29,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "engines": {
-    "node": ">=20.11.1"
-  },
-  "devDependencies": {
-    "node-sass": "4.14.1"
   }
 }
